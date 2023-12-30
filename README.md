@@ -2,8 +2,8 @@
 
 NutriCraft is a versatile recipe application that empowers users to explore, discover, and manage their culinary adventures. Elevate your cooking experience with NutriCraft's rich set of features.
 
-![NutriCraft](./img/main-logo.png)
-<img src="./img/main-logo.png" alt="NutriCraft" style="width:500px;">
+<!-- ![NutriCraft](./img/main-logo.png)
+<img src="./img/main-logo.png" alt="NutriCraft" style="width:500px;"> -->
 
 ## Features 🪶
 
