@@ -2,8 +2,8 @@
 
 NutriCraft is a versatile recipe application that empowers users to explore, discover, and manage their culinary adventures. Elevate your cooking experience with NutriCraft's rich set of features.
 
-<!-- ![NutriCraft](./img/main-logo.png)
-<img src="./img/main-logo.png" alt="NutriCraft" style="width:500px;"> -->
+<!-- ![NutriCraft](C:\Users\HP\JavaScript projects\recipe searching application\img\main-logo.png)-->
+<img src="img/main-logo.png" alt="NutriCraft" style="width:500px;">
 
 ## Features 🪶
 
@@ -19,7 +19,7 @@ NutriCraft is a versatile recipe application that empowers users to explore, dis
 
 ## Demo 🚀
 
-Check out the live demo of NutriCraft: [Deployed Link](your-deployed-link)
+Check out the live demo of NutriCraft: [Deployed Link](https://nutricraft.netlify.app/)
 
 ## Technologies Used 🛠️
 
