@@ -40,5 +40,5 @@ Contributions are welcome!
 
 2. **Clone the forked repository.**
    ```bash
-   git clone https://github.com/your-username/NutriCraft.git
+   git clone https://github.com/ayanghanta/NutriCraft.git
    ```
