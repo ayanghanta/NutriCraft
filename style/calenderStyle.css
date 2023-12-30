@@ -1,0 +1,160 @@
+/* 
+Primary color:#4FA83D
+#edf6ec
+#dceed8
+#b9dcb1
+#a7d49e
+#84c277
+#4fa83d
+#3f8631
+#28541f
+#204318
+
+Secondary color:#e85d04
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #e2f9cc;
+  /* color: #ffa500; */
+}
+html {
+  font-size: 62.5%;
+}
+/* .calender-item {
+  position: relative;
+} */
+.calender-container {
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  transform: translateX(-50%);
+  background-color: #b3d89c;
+  padding: 1.2rem;
+  width: 36rem;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.calender-open .calender-container {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.cal-close-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #ea6d1d;
+  cursor: pointer;
+}
+.calender-header {
+  font-family: inherit;
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #28541f;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgb(60, 105, 60);
+}
+.icon-cal-left,
+.icon-cal-right {
+  height: 4.2rem;
+  width: 4.2rem;
+  fill: #4fa83d;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #b9dcb1;
+  padding: 0.4rem;
+}
+.icon-cal-left:hover,
+.icon-cal-right:hover {
+  fill: #28541f;
+}
+.week-days-name {
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 1rem;
+  font-weight: bold;
+  color: #28541f;
+}
+.cal-days {
+  width: 100%;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 0.6rem;
+}
+.week-day {
+  text-align: center;
+}
+.month-day {
+  font-family: 1.6rem;
+  padding: 1.2rem 0;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-bottom: 0.4rem solid transparent;
+}
+.showed-day {
+  background-color: #80b918 !important;
+}
+.month-day:hover {
+  background-color: #80b918;
+}
+.active-day {
+  background-color: #4fa83d !important;
+}
+.marked-day {
+  background-color: #fdefe6;
+  border-bottom: 0.4rem solid #ea6d1d;
+}
+.calender-footer {
+  margin-top: 2rem;
+}
+.calender-footer .result__card--title-container {
+  margin-left: 1.2rem;
+  column-gap: 0.8rem;
+}
+.calender-footer .icon-crad-title {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+.calender-footer .result__card--title {
+  font-size: 1.6rem;
+}
+.calender-footer .result__card--active {
+  background-color: #fdefe6 !important;
+}
+.calender-footer .icon-cooked-meal {
+  fill: #d15404;
+}
+.icon-footer-smile {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #d15404;
+  display: inline-block;
+  align-items: center;
+}
+.no-cook-msg {
+  display: flex;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #d15404;
+}

@@ -1,0 +1,7 @@
+.vscode
+.parcel-cache
+node_modules
+dist
+data.json
+data2.json
+ideas.txt

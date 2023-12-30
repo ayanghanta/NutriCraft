@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NutriCraft: Your go-to app for effortless recipe searches, nutrition insights, and healthy living. Craft, savor, and thrive with precision in every bite!"
+    />
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>NutriCraft</title>
+    <link rel="stylesheet" href="style/general.css" />
+    <link rel="stylesheet" href="style/calenderStyle.css" />
+    <script type="module" src="JS/controller.js"></script>
+  </head>
+  <body class="">
+    <div class="overlay"></div>
+    <header class="header">
+      <div class="navbar">
+        <img src="img/main-logo.png" alt="Logo image of NutriCraft" class="header-logo" />
+        <form action="#" class="search__form" autocomplete="off" spellcheck="false">
+          <input
+            type="text"
+            name="query"
+            id="userQuery"
+            class="searchField"
+            placeholder="Search. Cook. Enjoy....."
+          />
+          <button class="icon-search--container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search" viewBox="0 0 256 256">
+              <path
+                d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+        <nav>
+          <ul class="nav__items">
+            <div class="filter-container">
+              <!-- <p class="error-window">Enter value b/w 0-100</p> -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="filter-close-btn" viewBox="0 0 256 256">
+                <path
+                  d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                ></path>
+              </svg>
+              <div class="filters">
+                <h3 class="heading-filter">Filters</h3>
+                <form action="#" class="diets">
+                  <div class="diet-container">
+                    <input
+                      type="radio"
+                      id="glutenFree"
+                      name="diet"
+                      value="Gluten Free"
+                      class="diet"
+                    />
+                    <label for="glutenFree">Gluten Free</label>
+                  </div>
+                  <div class="diet-container">
+                    <input type="radio" id="ketogenic" name="diet" value="Ketogenic" class="diet" />
+                    <label for="ketogenic">Ketogenic</label>
+                  </div>
+                  <div class="diet-container">
+                    <input type="radio" id="vegetarian" name="diet" value="Vegetarian" class="diet" />
+                    <label for="vegetarian">Vegetarian</label>
+                  </div>
+                  <div class="diet-container">
+                    <input type="radio" id="vegan" name="diet" value="Vegan" class="diet" />
+                    <label for="vegan">Vegan</label>
+                  </div>
+                  <div class="diet-container">
+                    <input type="radio" id="paleo" name="diet" value="Paleo" class="diet" />
+                    <label for="paleo">Paleo</label>
+                  </div>
+                  <div class="diet-container">
+                    <input type="radio" id="primal" name="diet" value="Primal" class="diet" />
+                    <label for="primal">Primal</label>
+                  </div>
+                </form>
+                <form action="#" class="ing-form">
+                  <ul class="diet-range-container">
+                    <!-- range:1 -->
+                    <li class="diet-range">
+                      <span class="diet-range-name">Carbs</span>
+                      <textarea
+                        name="minCarbs"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="min Carbs"
+                      ></textarea>
+                      <textarea
+                        name="maxCarbs"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="max Carbs"
+                      ></textarea>
+                      <span>grams/serving.</span>
+                    </li>
+                    <!-- range:2 -->
+                    <li class="diet-range">
+                      <span class="diet-range-name">Protein</span>
+                      <textarea
+                        name="minProtein"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="min Protein"
+                      ></textarea>
+                      <textarea
+                        name="maxProtein"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="max Protein"
+                      ></textarea>
+                      <span>grams/serving.</span>
+                    </li>
+                    <!-- range:3 -->
+                    <li class="diet-range">
+                      <span class="diet-range-name">Calories</span>
+                      <textarea
+                        name="minCalories"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="min Calories"
+                      ></textarea>
+                      <textarea
+                        name="maxCalories"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="max Calories"
+                      ></textarea>
+                      <span>grams/serving.</span>
+                    </li>
+                    <!-- range:4 -->
+                    <li class="diet-range">
+                      <span class="diet-range-name">Fat</span>
+                      <textarea
+                        name="minFat"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="min Fat"
+                      ></textarea>
+                      <textarea
+                        name="maxFat"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="max Fat"
+                      ></textarea>
+                      <span>grams/serving.</span>
+                    </li>
+                    <!-- range:5 -->
+                    <li class="diet-range">
+                      <span class="diet-range-name">Caffeine</span>
+                      <textarea
+                        name="minCaffeine"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="min Caffeine"
+                      ></textarea>
+                      <textarea
+                        name="maxCaffeine"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="max Caffeine"
+                      ></textarea>
+                      <span>grams/serving.</span>
+                    </li>
+                    <!-- range:6 -->
+                    <li class="diet-range">
+                      <span class="diet-range-name">Fiber</span>
+                      <textarea
+                        name="minFiber"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="min Fiber"
+                      ></textarea>
+                      <textarea
+                        name="maxFiber"
+                        id=""
+                        cols="10"
+                        rows="1"
+                        placeholder="max Fiber"
+                      ></textarea>
+                      <span>grams/serving.</span>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+              <div class="buttons">
+                <div class="btn btn-apply" type="submit">Apply</div>
+                <div class="btn btn-reset">Remove all</div>
+              </div>
+            </div>
+            <div class="calender-container">
+              <svg xmlns="http://www.w3.org/2000/svg" class="cal-close-btn" viewBox="0 0 256 256">
+                <path
+                  d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                ></path>
+              </svg>
+              <div class="calender-header">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-cal-left"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
+                  ></path>
+                </svg>
+                <p class="cal-title">Decembar 2023</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-cal-right"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="calender-body">
+                <div class="week-days-name">
+                  <div class="week-day">Sun</div>
+                  <div class="week-day">Mon</div>
+                  <div class="week-day">Tue</div>
+                  <div class="week-day">Wed</div>
+                  <div class="week-day">Thu</div>
+                  <div class="week-day">Fri</div>
+                  <div class="week-day">Sat</div>
+                </div>
+                <div class="cal-days"></div>
+              </div>
+              <div class="calender-footer"></div>
+            </div>
+            <li class="nav__item filer-box">
+              <!-- <p class="filter-num">5</p> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-header icon-filter"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M32,80a8,8,0,0,1,8-8H72a8,8,0,0,1,0,16H40A8,8,0,0,1,32,80Zm184,88H176V152a8,8,0,0,0-16,0v48a8,8,0,0,0,16,0V184h40a8,8,0,0,0,0-16Zm-80,0H40a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Zm-32-56a8,8,0,0,0,8-8V88H216a8,8,0,0,0,0-16H112V56a8,8,0,0,0-16,0v48A8,8,0,0,0,104,112Z"
+                ></path>
+              </svg>
+              <!-- FILTER CONTAINER -->
+            </li>
+            <li class="nav__item calender-item">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-header" viewBox="0 0 256 256">
+                <path
+                  d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"
+                ></path>
+              </svg>
+            </li>
+            <li class="nav__item shoplist_panel--container">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-header" viewBox="0 0 256 256">
+                <path
+                  d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
+                ></path>
+              </svg>
+              <ol class="shoplist_panal">
+                Add items that you have to buy.😋
+              </ol>
+            </li>
+            <li class="nav__item bookmark__panal--container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-header icon-bookmark"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Z"
+                ></path>
+              </svg>
+              <div class="bookmark__panal">
+                <!-- Bookmark card -->
+                <p class="bookmark__text">Find a nice recipe to bookmark</p>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="surch__result--section">
+        <div class="result__cards-container">
+          <!-- RESULT CARD:1 -->
+        </div>
+        <div class="pagination-btn-container">hello</div>
+      </section>
+      <!-- Recipe Card -->
+      <section class="recipe__details--section"></section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>

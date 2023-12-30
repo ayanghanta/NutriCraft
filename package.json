@@ -1,0 +1,14 @@
+{
+  "name": "nutri-craft",
+  "version": "1.0.0",
+  "description": "A recipe finding and diet planning application.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Ayan Ghanta",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
