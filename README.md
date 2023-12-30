@@ -2,10 +2,10 @@
 
 NutriCraft is a versatile recipe application that empowers users to explore, discover, and manage their culinary adventures. Elevate your cooking experience with NutriCraft's rich set of features.
 
-<!-- ![NutriCraft](./img/main-logo.png) -->
+![NutriCraft](./img/main-logo.png)
 <img src="./img/main-logo.png" alt="NutriCraft" style="width:500px;">
 
-## Features
+## Features 🪶
 
 - **Search by Name:** Find your favorite recipes effortlessly.
 - **Related Recipes:** Explore a variety of related recipes.
@@ -17,13 +17,28 @@ NutriCraft is a versatile recipe application that empowers users to explore, dis
 - **Search by Nutrition Value:** Discover recipes based on nutritional preferences.
 - **Meal Planning:** Mark meals on the calendar for easy tracking.
 
-## Demo
+## Demo 🚀
 
 Check out the live demo of NutriCraft: [Deployed Link](your-deployed-link)
 
-## Installation
+## Technologies Used 🛠️
 
-1. Clone the repository.
+- HTML5
+- CSS
+- JavaScript
+- ES6 Features
+- MVC Architecture
+- Parcel Bundler
+
+## Contributing 🤝
+
+Contributions are welcome!
+
+1. **Fork the repository.**
+
+   - Click on the "Fork" button at the top right corner of this page.
+
+2. **Clone the forked repository.**
    ```bash
-   git clone https://github.com/ayanghanta/NutriCraft.git
+   git clone https://github.com/your-username/NutriCraft.git
    ```
