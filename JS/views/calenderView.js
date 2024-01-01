@@ -5,6 +5,7 @@ class CalenderView {
   _calCloseBtn = document.querySelector('.cal-close-btn');
   _calTitle = document.querySelector('.cal-title');
   _calFooter = document.querySelector('.calender-footer');
+  _rightBtn = document.querySelector('.icon-cal-right');
   _data = [];
   // prettier-ignore
   _monthsName = ['January','February','March','April','May','June','July','August','September','October','November','December',];
@@ -54,6 +55,10 @@ class CalenderView {
     this._clearCalender();
     this._parentElement.insertAdjacentHTML('beforeend', markup);
     this._calTitle.textContent = `${this._monthsName[month - 1]} ${year}`;
+    console.log(month, this._data.activeMonth, year, this._data.activeYear);
+    if (month === this._data.activeMonth && year === this._data.activeYear)
+      this._rightBtn.classList.add('hideBtn');
+    else this._rightBtn.classList.remove('hideBtn');
   }
   _generateMarkup() {}
   adHandelclicksNavigate(handler) {

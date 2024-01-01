@@ -158,3 +158,8 @@ html {
   font-size: 1.6rem;
   color: #d15404;
 }
+.hideBtn {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
